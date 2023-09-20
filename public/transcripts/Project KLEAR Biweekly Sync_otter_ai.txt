@@ -1,0 +1,293 @@
+Unknown Speaker  0:07  
+Are we waiting for other participants?
+
+Unknown Speaker  0:10  
+No. Everyone should be
+
+Unknown Speaker  0:25  
+so
+
+Speaker 1  0:35  
+I'm recording the meeting because I want to do some analysis of how general in general meetings go.
+
+Unknown Speaker  0:45  
+Oh, it would it be
+
+Speaker 1  0:47  
+analyzing the transcript to to understand whether the meeting is going efficiently or not
+
+Speaker 2  0:58  
+like a research project, yeah. Okay. Okay.
+
+Speaker 1  1:02  
+Yeah, but I don't tend to publish his data. So don't worry. No way. To say anything. Nothing. Just internal analysis.
+
+Speaker 2  1:16  
+Yeah. Yeah, I had a really busy week. And like I moved around like yesterday. Okay. Yeah. I moved to arrive so what oh, by yeah, by the way. It's complicated by Yeah, it's like we decided to move to a bit larger like Parliament like for the last year. Okay. Yeah, I think we had a discussion with FEMA and Adam last week about like, we we decided to investigate a fire venue, I guess. So, waste chi Ismar BRST and I triple E VR. So this venue, I do investigate what will be the what are the existing augmented reality sets I would like to focus on I haven't really I haven't started yet. I'm not sure if Adam and and even has any results.
+
+Speaker 3  2:32  
+Oh, yeah. I took a look at a small starting from a small but found out or the conference like the visual conference also includes some like they are related papers. So I separated into four groups in the sounds of Google doc now.
+
+Speaker 4  2:49  
+I've also been starting to look at some key papers about your work. And that's also in Google Drive. And then separated by topics as well.
+
+Speaker 2  3:01  
+Okay, nice. Yeah. So far is our We're still investigating the like, the rating works. And I have already cigar with England. Lm this way yet. So do you have any other results on a share?
+
+Speaker 3  3:26  
+Yeah, I have a readout in like applying like, last week I show like some result in 3d, right. But I tried to like distill the 2d information. To 3d and I have some metadata and
+
+Unknown Speaker  3:39  
+share.
+
+Unknown Speaker  3:43  
+Me a neighborhood
+
+Unknown Speaker  3:52  
+called How to use Zoom.
+
+Speaker 5  3:59  
+Oh, yes. Okay.
+
+Speaker 3  4:15  
+Can you see the screen? Yeah. Yeah. So this one right here some like description, like this one. Used like three tokens, which is Mike Wiles understand, respectively and this is the wild and this is a mic case. And when you say Mike, this part can be highlighted. When you say well, this one can be highlighted. And when you say an extent, this one can be highlighted and the result can be proved by adjusting some parameters for this special case. And here's another degree of view angles. And yeah, and here, the standard is much better than the previous case. And here's here are some results using the sliding window. And you see like the geometry is not preserved, as well as ours. So I think yeah, there's some improvements. And we haven't tried on like live data set yet. But I think we will try like maybe this weekend.
+
+Speaker 2  5:15  
+So I'm not completely following. So you mentioned I also mentioned last week so about some the parameter adjustment and also what is the slides sliding window is like a different approach.
+
+Speaker 3  5:30  
+Yeah, sliding window is just you took an image and you took this patch of the image understanding to the clip encoder, in the back here in our case is I took this whole segmented port and the sending send it into the into the clip encoder. So
+
+Unknown Speaker  5:52  
+So what So what is the clip encoder?
+
+Speaker 3  5:56  
+Krypton encoder is? Clip have a image encoder and the text encoder and it can the input can be a part of the image or like some 2d matrix
+
+Speaker 2  6:06  
+or this is the is it like the input image and then put it into the clip encoder and they will return like a number? Yes. And then you just use like a window to to get like the, like the second managed or the auto mask? Is that what you're doing? What is it timely?
+
+Unknown Speaker  6:28  
+See, okay,
+
+Speaker 3  6:29  
+so for the threading model, there are no segmentation it's pre processing. Yes,
+
+Speaker 2  6:34  
+I see. So now but now you're doing the doing the using the segmenting everything first and then you split Okay. I see.
+
+Speaker 3  6:45  
+For the love they are using the sliding window but use it on a multi level scale setting. So they can get some details using the sliding window by itself. And the quality is pretty good. Yeah. Have a try.
+
+Speaker 2  7:09  
+Like those like was abstracted description.
+
+Speaker 3  7:15  
+I saw the result, but I haven't tried on on my like, on my on my method and the result sorry
+
+Unknown Speaker  7:33  
+Yeah, I think it's this one
+
+Speaker 3  7:45  
+Yeah, this one this favorite they're saying like you see here saying like soft and then the soft part can be heard and they're saying the work and the workspace can be highlighted. And definitely when you say find the functionality, but they are doing that on a point cloud, a 3d representation, but using the clip as well to encode the tween codes, the segment SEC semantic information. They have a video. You can take a look. This they have an example thing like some like fragile, fragile, like stuff. And stuff made by the ceramic can be highlighted. So yeah, so the creep does encode some abstract information. Oh, yeah. For this one. I'm gonna fragile.
+
+Speaker 2  8:43  
+Oh, nice. Okay. Yeah. Yeah. Yeah. So so if we just generate those psycho kind of abstract instruction from our model there's a way we could possibly make map them together. Right?
+
+Speaker 3  9:03  
+Yeah, when you say maybe. Foam definitely because foam can be highlighted, but I'm not sure how abstract can we be like there are some experiments that we need to work on.
+
+Speaker 2  9:19  
+Yeah, also another thing I say set off, so currently, we're just doing like them the mapping between the physical object to our to the tax laundering. So is it just something like open discussion? Can we let's say if we the instructions, such as, like referring to a specific physical object, but what about like some action or activity? We can think about? Is it possible for us to also like, convert that into some visual content in the physical environment to to guide the user to follow like, a specific action or something?
+
+Speaker 3  10:05  
+Yeah. So I saw some like a large language model which are doing some refunds are based on the initial output of the body language model. So maybe you can say some abstract statement and the concrete model will give you some feedback and ask you to be more concrete, and you can just follow, follow there like follow the models output and say some more concrete stuff and hopefully, we can generate more concrete our token and the can be used for the for our like 3d detection model. To detail with object
+
+Unknown Speaker  10:48  
+Yeah, okay. Yes.
+
+Speaker 3  10:49  
+And the last time you mentioned, maybe we can consider some context visual contracts information to generate the to improve the quality of the language token right. And and I saw a paper
+
+Speaker 3  11:12  
+Yeah, this one, this one is doing like you saw egg in the microwave. And you say like, put the egg in in some like oh, this is plugged in the fridge put into a microwave, but you saw the microwave. So it will fix this sentence and make it use a microwave. Yeah, so yeah. So it can be like that.
+
+Speaker 2  11:40  
+All the paper I archive exactly like moving. It's just too much. It's like overflows. It says it's
+
+Speaker 3  11:49  
+Yeah, but not so much work, which takes the visual observation into consideration. That's the only one I found.
+
+Speaker 2  11:57  
+Yeah, yeah. Check check those Yeah, this looks cool. And a question for fathers.
+
+Speaker 4  12:13  
+I guess I saw you also had like some stuff about like, spatial audio. Could you also like, talk about that too? You mean another paper? Yeah. Like you had like a full folder for like
+
+Unknown Speaker  12:29  
+like audio
+
+Unknown Speaker  12:36  
+you mean, this one?
+
+Unknown Speaker  12:46  
+I don't have too much regarding like,
+
+Speaker 4  12:48  
+Hey, I just remember seeing like an audio in there somewhere. Okay.
+
+Speaker 3  12:56  
+Yeah, maybe we can discuss later. And there's some thinking about like, our application wants to do some like to do some like semantic understanding of the 3d scene. And then apply some AR do some AR application. And here is an example using the semantic information of the observed scene. And what they're doing with AR is they try to position the virtual object in the real scene. by first understanding what the what the object in the real thing is. So they want to put the PDF file and then the algorithm will tell with help with how the aircraft is that they want to put a virtual PDF close to the computer, and they try to use this way to optimize how the virtual object can be appear in the real world. And here's another one about like you said last time, like, we want to, for example, if we if I say like, I don't want to be disrupted by the phone, then how should we handle this? Case? Should we put a mask on top of or do something else? So I found a very interesting application here like the or diminish, diminish the object, so probably this is a better way to to handle this case. The destruction of the case instead of putting the mask, you can decrease the transparency of the object. And this one is mainly worked on like how the different degrees of Transparency can impact the users, the users like feedback. So not too technical, but some like Do you have some like good results on experiments? So
+
+Speaker 2  14:49  
+yeah, I think they may invoke has some that his bow has some like a ratio and we probably need to check those.
+
+Unknown Speaker  14:59  
+And yeah
+
+Unknown Speaker  15:04  
+yeah, looks promising. Yeah. Thanks for forever asking.
+
+Speaker 1  15:14  
+So the Princeton papers seems the closest to our implementation, right? We use Clip models to map text labels to parts of the 3d scene opens.
+
+Unknown Speaker  15:30  
+Yeah, yeah, it's
+
+Speaker 1  15:31  
+that it's it's just some implementation we could use from that paper.
+
+Speaker 3  15:38  
+Yeah, actually, like, what I'm working on is to map the text to this reducing
+
+Speaker 1  15:45  
+sentence, input a sentence like, I want to relax, lie down or something like that. I wonder what the result would be.
+
+Speaker 3  15:55  
+Yeah, I kind of try this case. But now like the only case we can handle is if you say so forth and stuff I can be detected, but not so sure for if you stay relaxed in the sofa can be detected. Yeah, and like this paper shows like, the soft can be tech. Like if you say Soft Sensor software can be detected. But that's on the, on the podcast. So different, like 3d representation, then our
+
+Speaker 2  16:24  
+filler paper. They also mentioned something like if you it has like intermediate steps. So if you want to stay relaxed, and then you can ask like collage model say that if I only relaxed what kind of optic or like furniture that you can rely on so and then maybe in the format of like, I like stiffness or something and then it will count probably return you Okay? Your main property wants to relax on some soft, soft paper, maybe a flat like object then in that case, we can use the similar like, like implementation that can probably give us like maybe bad or sofa relaxant. That's one possibilities, I guess. Yeah. But I think for sure, it will not be at as easy as we were just putting in a sentence and then the model can directly give us the all points or the target objects. I think there will definitely be like in some intermediate step was to, to do the processing. For sure. I was saying and yeah, I think now I guess we it's a good time for us to think about what will be the form factor of our implementation. So it could be either be a projection, i By the way, I haven't checked the the spatial augmented reality paper that gets KY C's like Frank Frank from Waterloo. They call I guess, let me check it out in the
+
+Unknown Speaker  18:05  
+literature review. Where it's like a section about augmented reality.
+
+Speaker 2  18:11  
+Yeah, probably. Yeah. Yeah. Yeah, that's that's I just wonder what what kind of effect that you we are targets. So we just do some similar thing like the projection based augmented reality or we use a say, phone mobile phone
+
+Unknown Speaker  18:39  
+I haven't took a look at this paper yet.
+
+Speaker 2  18:46  
+So what I'm asking is, is this something is just something that can only be done by I mean, let's say comparing using like mobile phones, let's say for your kids using, like, iOS software versus this ratio, augmented reality using like a projection was was the trade off is just something that one can do, but the other cannot. I think, I think special going right is like it, I can see for sure that these two has their own like advantages. So I go see more voice more like it's always egocentric. So probably can give you more. Say, I don't know instruction. Before especially augmented it is like it can be shared by by multiple people. And it does not really require like you always like wearing like glasses or like hold on holding like foam or something.
+
+Speaker 3  19:57  
+Maybe, I mean on the online shopping some online shopping or implements. How do you like make the product become like virtual object which can be mapped to so users and probably like we can do some spatial PR for this case, like you want to generate a your asset in the show with the customers who are using this online shopping system in a can like some trial system using the AR
+
+Unknown Speaker  20:28  
+You mean? Automated?
+
+Speaker 3  20:32  
+Yeah, it's like if I wanted to buy a pair of shoes. I don't know like whether the shoes fit my size. Or is that fit with my outfit? So and it's hard to tell from the image. I need to put that on my on my on my on my feet, right. So probably the surface of the shoe of the shoes, like the steroids can provide a AR asset. Like they can use a spatial your choose to generate 3d to generate a 3d model of the shoes and share with ours. And we can map it
+
+Speaker 2  21:14  
+but I think I think I think the core difference between these two is like a special document write it the project content will always be 2d. So there's no way for it to project like 3d 3d Like, augmented like con content but the best possible to render that in like say a mobile based like augmented reality, but I just I just want to in terms of like implementation, do you think there will be like a big difference? Will it be easier for like, say, like, spatial augmented reality is, in that case, you can just have like a study camera. And maybe maybe do the like the scanning or something, maybe every minute and then I don't know Do you think it will be well it'd be like a big difference in terms of like different difficulty for implementation.
+
+Speaker 2  22:23  
+Like what's the also a or like, we can think about if we want to use mobile phones, how can we implement this technology? If we use special augmented reality? How can we do this?
+
+Speaker 4  22:39  
+Well, I guess it's so like, implementation based but I like the idea of a mobile phone because it gives you like that first person or third person perspective. If we ever wanted to do it, not that way. Because I've been reading a lot of papers about mobile AR and it's, it gives me like, a different like two different perspectives in that sense.
+
+Speaker 2  23:02  
+Yeah, yeah, for sure. So yeah, I guess my my question now is, let's say you so animation you were working on like three, like you're, like doing on a 3d scene. For the for the demos. Just wonder. So what was the what's the plan? So how do you get like the 3d information run environments did to scan or reconstruct or like using a reversible, so
+
+Speaker 3  23:33  
+yeah, now we are like taking the multi view images. Just the input Yeah. And you can also generate the Point Cloud is maybe LIDAR to get some high point cloud and you can also get a semantic 3d. Construct a 3d semantic space, using the point cloud, as well. So point cloud spa multi view images, doubles fine.
+
+Unknown Speaker  24:03  
+I see. One thing nerve is opposed. Yeah.
+
+Speaker 3  24:09  
+Yeah. Yeah. I mean, nervous using the multi view images, and that's what I'm using. Yeah. Oh, I
+
+Unknown Speaker  24:16  
+see. I see. I see. So which one is faster?
+
+Speaker 3  24:21  
+For the nerve, like we need to spend about 3030 minutes to train and the test time will be about 10 seconds. Yeah.
+
+Unknown Speaker  24:32  
+What about a point?
+
+Speaker 3  24:37  
+Point call probably is faster. Because nerf is known for his luck slowness. Yeah, so yeah, I don't know. I haven't read the paper in that much. In so in this in that level of details, but yeah, I think nerf is pretty slow. Compared with Chromecast.
+
+Speaker 2  24:57  
+I see. I see. Yeah, well, whatever is best for us, I guess.
+
+Speaker 3  25:04  
+Yeah, it's hard to do some like real time interaction with the nerve like every time you move on up, you're changing object. The next thing that you need to reach me the thing
+
+Speaker 2  25:18  
+so. So when we say something like this, so if let's say we have like statics that a camera for spiritual morality, by the way so it will the the resizing nerve have higher quality than using point cloud?
+
+Speaker 3  25:39  
+I mean, for now, like through my experiments, they're quite similar. I mean, the quality side yeah, the nerf is known for his like high quality of RGB RGB domain generation. And with your in the wisdom, we can have a high quality, semantic space as well. So I mean, it's just two different ways to approach this problem in the quality sight, read, really it's not about the nerve I mean, for the semantic accuracy is not about nerve it's about clip, whether the clip have the capability to to match the visuals and the text. Yeah,
+
+Unknown Speaker  26:23  
+I see. Okay. Yeah.
+
+Speaker 2  26:32  
+Yeah, yeah, sounds good. So, yes, let's do like located that. And also, you like put put, like, all your exploration like, how you adjust parameters, or like the tax and accounting to like document so I can take a look.
+
+Speaker 3  26:51  
+Yeah, sure. I can share the code like GitHub.
+
+Unknown Speaker  26:55  
+Yeah, please do that.
+
+Unknown Speaker  27:05  
+Any questions? Other.
+
+Speaker 4  27:12  
+I guess I have like comments about the actual evaluation process. So um
+
+Speaker 4  27:28  
+so for the user evaluation, do we have to do like a comparison or can we just test like the system itself? Or would that be like a limitation? If we just test the system itself? Without like a control group?
+
+Unknown Speaker  27:43  
+Or like a base group? In my, in my
+
+Speaker 2  27:48  
+in my opinion, I think we can just do like a qualitative I got yesterday.
+
+Speaker 1  27:59  
+You can always test just the AR System, right? Without any harassment.
+
+Unknown Speaker  28:07  
+It's the baseline was the best baseline.
+
+Speaker 1  28:12  
+It's a pure vanilla AI AR AR System. Okay. So ours is considered an enhancement. of AR.
+
+Unknown Speaker  28:30  
+So what will be the task?
+
+Speaker 2  28:30  
+If we want to compare with baseline AVR?
+
+Speaker 1  28:36  
+Well, I don't think it's still clear that what we what is our system, it's going to Yes, maybe too early to discuss the tasks or maybe maybe it's not too early you should you can think about a task and then define what a system is. Based on the task it can support.
+
+Speaker 3  28:59  
+In the form of paper, they highlight like 20 different tasks using AR we can choose one and to compare with yours.
+
+Speaker 2  29:12  
+So so the task is kind of what domain you want me.
+
+Speaker 3  29:43  
+So is this one called like creating the r&b replication, current practice practices challenges on the opportunities
+
+Speaker 3  29:59  
+Nigeria? I think there are like some. They all work training, medical education, social platform. Storytelling,
