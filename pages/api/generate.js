@@ -30,31 +30,31 @@ export default async function (req, res) {
     //   }
 
     const prompt = generatePrompt(transcript, analysisType)
-    console.log(prompt)
+    // console.log(prompt)
 
-    res.status(200).json({ result: prompt });
+    // res.status(200).json({ result: prompt });
 
-    // try {
-    //     const completion = await openai.createCompletion({
-    //         model: "gpt-3.5-turbo-instruct",
-    //         prompt: generatePrompt(transcript, analysisType),
-    //         temperature: 0.6,
-    //     });
-    //     res.status(200).json({ result: completion.data.choices[0].text });
-    // } catch (error) {
-    //     // Consider adjusting the error handling logic for your use case
-    //     if (error.response) {
-    //         console.error(error.response.status, error.response.data);
-    //         res.status(error.response.status).json(error.response.data);
-    //     } else {
-    //         console.error(`Error with OpenAI API request: ${error.message}`);
-    //         res.status(500).json({
-    //             error: {
-    //                 message: 'An error occurred during your request.',
-    //             }
-    //         });
-    //     }
-    // }
+    try {
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [{role: "user", content: prompt}],
+            temperature: 0,
+        });
+        res.status(200).json({ result: completion.data.choices[0].message.content });
+    } catch (error) {
+        // Consider adjusting the error handling logic for your use case
+        if (error.response) {
+            console.error(error.response.status, error.response.data);
+            res.status(error.response.status).json(error.response.data);
+        } else {
+            console.error(`Error with OpenAI API request: ${error.message}`);
+            res.status(500).json({
+                error: {
+                    message: 'An error occurred during your request.',
+                }
+            });
+        }
+    }
 
     
 }
@@ -62,7 +62,9 @@ export default async function (req, res) {
 function generatePrompt(transcript, analysisType) {
     switch(analysisType) {
         case 'OVERALL CLARITY':
-            return "based on the following transcript, can you assess the clarity of speaker 1' speeches? " + transcript
+            return "based on the following transcript, can you assess the clarity of speaker 1' speeches? " + transcript;
+        case 'SPECIFIC CLARITY':
+            return 'based on the following transcript, can you provide three examples where speaker 1 can improve the clarity of speech. format your response as [{"speech": "...", "analysis": "..."}, {"speech": "...", "analysis": "..."}, ...] where "speech" is a sentence speaker 1 said that has clarity issue and "analysis" is your analysis on how to improve that sentence"s clarity ' + transcript;
         default:
             return "no analysis type specified. please do nothing.";
     }
