@@ -64,7 +64,7 @@ function generatePrompt(transcript, analysisType) {
         case 'OVERALL CLARITY':
             return "based on the following transcript, can you assess the clarity of speaker 1' speeches? " + transcript;
         case 'SPECIFIC CLARITY':
-            return 'based on the following transcript, can you provide three examples where speaker 1 can improve the clarity of speech. format your response as [{"speech": "...", "analysis": "..."}, {"speech": "...", "analysis": "..."}, ...] where "speech" is a sentence speaker 1 said that has clarity issue and "analysis" is your analysis on how to improve that sentence"s clarity ' + transcript;
+            return 'based on the following transcript, can you provide three examples where speaker 1 can improve the clarity of speech. format your response as [{"speech": "...", "analysis": "..."}, {"speech": "...", "analysis": "..."}, ...] where "speech" is a sentence speaker 1 said (please quote it exactly without making any changes) that has clarity issue and "analysis" is your analysis on how to improve that sentence"s clarity. ' + transcript;
         default:
             return "no analysis type specified. please do nothing.";
     }
