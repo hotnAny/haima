@@ -36,7 +36,7 @@ export default async function (req, res) {
 
     try {
         const completion = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-16k",
             messages: [{role: "user", content: prompt}],
             temperature: 0,
         });
@@ -64,18 +64,8 @@ function generatePrompt(transcript, analysisType) {
         case 'OVERALL CLARITY':
             return "based on the following transcript, can you assess the clarity of speaker 1' speeches? " + transcript;
         case 'SPECIFIC CLARITY':
-            return 'based on the following transcript, can you provide three examples where speaker 1 can improve the clarity of speech. format your response as [{"speech": "...", "analysis": "..."}, {"speech": "...", "analysis": "..."}, ...] where "speech" is a sentence speaker 1 said (please quote it exactly without making any changes) that has clarity issue and "analysis" is your analysis on how to improve that sentence"s clarity. ' + transcript;
+            return 'based on the following transcript, can you provide three to five most significant examples where speaker 1 can improve the clarity of speech. format your response as [{"speech": "...", "analysis": "..."}, {"speech": "...", "analysis": "..."}, ...] where "speech" is a a substring of the transcript that is part of speaker 1\'s speech and that has clarity issue and "analysis" is your analysis on how to improve that sentence"s clarity. finally, fix your response to make it a valid JSON string. ' + transcript;
         default:
             return "no analysis type specified. please do nothing.";
     }
-//     const capitalizedAnimal =
-//         animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-//     return `Suggest three names for an animal that is a superhero.
-
-// Animal: Cat
-// Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-// Animal: Dog
-// Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-// Animal: ${capitalizedAnimal}
-// Names:`;
 }
