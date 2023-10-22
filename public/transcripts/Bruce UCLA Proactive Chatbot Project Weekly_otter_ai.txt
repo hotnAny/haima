@@ -1,0 +1,163 @@
+Unknown Speaker  0:00  
+Not sure if he
+
+Unknown Speaker  0:04  
+is the student
+
+Unknown Speaker  0:08  
+there's nothing in fact
+
+Unknown Speaker  0:20  
+Oh Hello, is it me a long time? No see? Oh, is this altars? altars Ignite is that altar AI? Audible? Okay, yeah because we just talked to there is fellas, like two weeks ago. I'm ready okay because sales were getting sales were signed a contract we've altered to put some like peer ASR system in our meetings. So,
+
+Unknown Speaker  1:04  
+this is interesting, but this is
+
+Unknown Speaker  1:08  
+not we can just
+
+Unknown Speaker  1:11  
+okay. Yeah. So thanks so much, Jason for joining this meeting. And so, let me just share my screen first. So for today's meeting, I just want to quickly go over the project. This has been a long time since we talked just want to briefly what is the state of this project and things I want to discuss with you. Okay, so, this project, our topic is trying to make conversation AI proactive in human human communication. So I'll explain basically what is proximately. So essentially, the problem we identify is that, like nowadays, we have a lot of language models and they're more more popular and we use it mostly as a conversational AI. So like a chatbot. And, like, examples are like we interact with LGBT through a chat interface. And it's always like a one to one turn taking procedure. So you always have to enter something and then try to respond to whatever you just written or said. And so it's always like responding to human comments. So say something and then it have some process and respond with generated text. So we noticed that there is a gap between the current status of commerce like language models and a true AI that that in future will be a social part of our society. So we thought that there's a gap between AI as a tool versus AI as a social entity that could actually participate in our social activities. So our research focused on communication. Specifically, how can conversational AI, we're actively participating in human communication. So that means we don't need to, it's not like, we don't need to stand it up and comments or is not responding to whatever we just said earlier. It's just like a human. So imagine like in a three people communication scenario, a group conversation. If those two people are just talking and then ideally, it should be able to just respond whenever it feels like it has a desire to participate or it has an intent to say something rather than like the current step that has this like we always have to mention the AI or asked the AI to to intervene or to join the conversation. So yes, of course, I'm prior work on this, how to make AI attractive, but we found that most of them use turn taking prediction either like semantic prediction or timing based turn taking prediction. But we thought I also like systems like Alexa Siri to also have like this turn taking prediction. system to determine when should the assistant start talking. But we found that this is not accurate. And also especially hard in a group conversation scenario. So imagine if two people are just talking and it's really hard for for for the AI to determine like whether it should wait for the other person to talk or they should take over the conversation or it should just wait for the original speaker to continue to speak. And also like turn taking predictions. It's like so using this model like we observe that different people have very different turn taking strategies. So for example, like more active people, they will like take over conversations more aggressively, and other people might just wait. So we found that actually like the data set, we found that like most of the turning conditions are having accuracies around like 50 to 60%. And we thought one of the issues is that like different people have so different behaviors, and that makes the dataset like maybe so diverse and it cannot generalize to a good solution. So our research is that we're trying to replicate like how humans participated in conversations and try to, like, employ that kind of mechanism into AIs. So one, argumentation of forces that how can we make conversation since we first have thoughts? We are like constantly listening to the conversation since constantly constantly having like thoughts or the conversation. So in psychology, the term is called like covert responses in addition to our own word responses, that is the responses where we speak out or our body language. So our assumption is that we're having conversations people first formulates its own in their thoughts. And then based on these thoughts, they generate potential responses. So that decides what and when to contribute to the ongoing conversation. Still, we're trying to propose the AI system to do just that, like a human participant.
+
+Unknown Speaker  6:58  
+Questions? Is your any HPI study? Let's already do this on humans. Like how people or what's the most comfortable way for people to chiming or when, like before, even without thinking about AI?
+
+Unknown Speaker  7:16  
+No. So that's one thing we notice like no one has ever studied, like? Well, there are like, more generic studies on like, why people or when people contribute conversations, but there are no studies especially in a group setup. Like how people decide, especially like, no study our investigate the water, who are thinking when they're having conversations. Yeah, but it's hard that you cannot measure that. Yeah, I think partially is because it's not really useful. Because yeah, I think yeah. But anyway, so that's the core idea of our system. And also like, this is not we're not saying this is like correct, or this is not the how people this might not be how how human brains actually work. It's just like I don't know like a workflow that we thought might make sense and a workflow that enables proactive participation in communication. So yeah, so we also like looked at a lot of research in cognitive psychology, and also like conversation, this conversation and research is not valid HCI or NLP but in more traditional research fields, and we identify like these five steps of how AI should or like this, these are actually a human, a model for how human participating conversations without the so applicable for AI. So the first step is like the trigger. So essentially, it will trigger this whole process. It could be a conversational event, like a new utterance as part of our body gesture. That will lead to a thought process and then step two is activation or memory retrieval. So in this step, like before the formation of thoughts, you have to retrieve some materials to generate your thoughts based on these materials. So, those are activated memories and it will so basically, whenever So, for example, if you heard the other person says something and you will have some memories that are activated, they might be related to the thing that person just said, or it could be some random noise. So that will like increase creativity in the step, and then based on those activities, that memories, utility information, and step four is censorship. So, after generate all these thoughts, who will be a you have to select what to express and also whether to express something and the fifth step is participation. So you'll have to, like articulate the thoughts into a sentence and express it in an ongoing conversation. And to make it more secure, like here's a diagram we made. So essentially, you have like a thought reservoir, and you're constantly generating new thoughts based on the ongoing conversation and a bank of long term memories. So that includes like, for example, objectives and knowledge of the conversation. And then each round new thoughts are generated and then it will be internally evaluated. And also thoughts can be built upon previous thoughts, so that it will also combined based on previous thoughts and then if there's a thoughts do you have a strong desire to express a well like, express it and yeah, and turn that into a sentence, an utterance in the conversation.
+
+Unknown Speaker  11:38  
+What is thought recalibration,
+
+Unknown Speaker  11:40  
+oh so recalibration is just add for each round you will like as a part of the activation process. So for example, you have a previous thoughts that might not be that relevant to the current conversation maybe later up in the point some, some new topics are brought out, you can you will remind you of that thought previously had before Okay, so there's this our system and we build like an interface based on the structure, and it can actually try it out. Later, central LinkedIn. Yeah. So do you have any questions? Yeah.
+
+Unknown Speaker  12:33  
+Question, How did you how did you measure this urgency? Or Excellency and lower trigger basically, when to when to interact?
+
+Unknown Speaker  12:50  
+Yeah, exactly. So yeah, that's, that's a thing we're working on right now. So essentially, we have finished like the previous three steps. And now we are working on sensors. So there are Yeah, I think it's quite difficult. We have proposed two different approaches like the first approach is just to ask shaggi PT, like let it determine itself. And so basically, you have like all these three or these thoughts and you have to select one. And the second approach were working on is we did a formative study with 24 participants. So how we did the study is we let them chat on Slack. And then we give them four topics. Each and let them chat for like five minutes for each topic, and then ask them to it's like a think aloud session. We asked him to go lower the conversation they just had and explaining like, what are they thinking and how did they make their decision to participate? At each point of the conversation and what is the rationale for saying something in this conversation? And also, if they had any moments that they have a strong desire to intervene or they had something in mind, but they decided not to express it in the conversation. So basically, we have a lot of like, qualitative data. And we are thinking of just doing like an interview, study at all like this and then organize the themes that emerged. So have like, we can propose some metrics for evaluating the scores. So essentially, like the Select Action is like a quantitative metric.
+
+Unknown Speaker  14:57  
+Can we Yeah, I'm almost gonna touch upon the metrics. Because can we do this kind of, sort of post processing way? That's a given whatever conversation like multi party conversation we can get online right. And you can assume that you are one of the person and you fall you you no matter you charge up to whatever you generate all these thoughts and consolidate right now. You know, in the ground shoes whenever this person say something at turn T Yes, right. And you can measure that turned p what? He or she say, map to any of the sock created here. So you will have lost pseudo label.
+
+Unknown Speaker  15:45  
+Oh, yes. So that's the second part of the study we're thinking of which is as a little bit different, but we're thinking of just have sewer will have like this interface and then we will have like an automated conversation. So the person will be acting as the AI in on this interface. And then right here there will be like two two other people speaking,
+
+Unknown Speaker  16:16  
+okay. This inner soul is written by AI or written by the human,
+
+Unknown Speaker  16:20  
+the AI, okay. So there will be no thoughts generated and the human will decide for each run of thoughts. If they want to express something or they want to like skip. Yeah.
+
+Unknown Speaker  16:37  
+Yeah. I feel like both valid might be able to use both. The first is more natural, right. Oh, yeah. I think we this is more can be more in control but less natural.
+
+Unknown Speaker  16:53  
+Yeah, for the first one we already completed. I think for the first one is more like identifying the metrics from the qualitative
+
+Unknown Speaker  17:05  
+not by the first of all, I mean, what Jason proposed Oh, so yeah. You just compare what AI generates to what the person actually said. Yeah, but But how often? That's a question. Um,
+
+Unknown Speaker  17:27  
+also, I think for that approach is like, just like there's no ground truth for conversations. So it's hard to decide like If so, for example, if you use the existing data set, and then someone's said this at this particular moment, that doesn't mean like it's granted, it's fine. If it's another person, or if the same person but we're doing it again, it could be just completely a different content or he could,
+
+Unknown Speaker  18:03  
+yeah, and that is bring back to like, what hypotheses you want to prove here are required to prove that this inner thoughts is it's met them the crucial factor that people know how to do communications. So meaning, so if we add this component to MLMs, then you can better predict when to say what is that hypothesis you want to show here or you want to analyze humans behavior?
+
+Unknown Speaker  18:39  
+No, I think it's more like analog as a human behaviors and developing computational method to to evaluate these thoughts.
+
+Unknown Speaker  18:54  
+I see. I see. I see Len, they actually I think let the portfolio I think we might provide some insights because I'm not quite sure let's share with you this. This persona data personal data set let basically the environment setup is they will give like okay, you owe me some kind of facts. You are five years old you are you have some toolkits or whatever, there's some facts about me and you know something about you, right and we start chat, right. And then when we are doing chatting, they are basically evaluate you know, when to certain what fact to go into the conversations. And, yeah, in that case, if you do post processing, and you will know, let's say you use chargebee to generate 10 paths of sorts, that you can know like, grounded out this 10 paths which one is closer to the ground shoes that people are actually staying at that turn. Right so you what's the name? Let me find it I think there's multiple data sets Yeah, okay.
+
+Unknown Speaker  20:16  
+Yeah, personal not shut is one of the earliest version but there's multiple release 17233 years ago, so should have some more more more recent okay
+
+Unknown Speaker  20:34  
+yeah
+
+Unknown Speaker  20:45  
+so if you look at this hugging feature set, so, if you look at what they have, so, each person you will have your personality predefined I like to go hunting, I like to whatever, right it's some pretty fun stuff. So, both both party have it on and interest and, and they'll start talking
+
+Unknown Speaker  21:07  
+Okay, okay. Yeah, that's interesting. Yeah.
+
+Unknown Speaker  21:13  
+Yeah, let me let me try to find some more recent one. But yeah, this is what I just what I started doing okay.
+
+Unknown Speaker  21:34  
+So you already finished the study of the 20 Something people Yeah. So Okay, how's how's that? How's it how's the results?
+
+Unknown Speaker  21:43  
+Oh, we haven't like do formal analysis, but we already observed. So just the study of some like very common like things you mentioned. So, I think the whole thing is irrelevant. So, like how relevant the thought is to the current ongoing conversation. And also several people mentioned like the the if the thought is interesting, or provide like new values to the ongoing conversation.
+
+Unknown Speaker  22:16  
+This is a formative study. Yeah. See, when it's not evaluating any system is essentially trying to learn people with heuristics when they generate Oh, yeah, conversation. I see. I see. Yeah,
+
+Unknown Speaker  22:35  
+so.
+
+Unknown Speaker  22:48  
+So do you have any like other suggestions on the censorship stuff?
+
+Unknown Speaker  23:02  
+Not much. Maybe I would like to try your system. Okay. Yeah, we can only copy the link
+
+Unknown Speaker  23:19  
+so
+
+Unknown Speaker  23:19  
+just doesn't have the censorship part, right? No, no, you have to figure out
+
+Unknown Speaker  23:27  
+Yeah.
+
+Unknown Speaker  23:28  
+I just want to check how accurate the thought is generated.
+
+Unknown Speaker  23:32  
+Yeah, he's doing incognito to
+
+Unknown Speaker  23:36  
+last year not sure that you have to use Chrome, I think Yeah.
+
+Unknown Speaker  23:52  
+Okay. Anyway, so I think there are some things some questions want to talk about. So like, the first month, I think what we are doing should be a new task in the field of NLP, so we're trying to make AI to proactively engage in conversations
+
+Unknown Speaker  24:18  
+and human human conversation Yeah, human
+
+Unknown Speaker  24:20  
+human conversations. Specifically Yeah. Like, have you like in your analogy have Have you seen any like similar paper doing this? I think Yeah.
+
+Unknown Speaker  24:38  
+I think some paper as you say in the beginning, is is more about current predictions. Yeah, that one definitely have some work. But definitely not about modeling the inner assaults. No, I think more most of that is more like, retrieve an argument kind of thing. Like yeah, so every turn. Will you have some knowledge base to be some knowledge articles or chunks Wikipedia chunk, and then you will retrieve and say maybe, current current term is whether you need a knowledge rich or not yes or no prediction. If yes, then you go. You go retrieve like top three and then you you put that into the context generate response, I think in many words are actually doing this kind of focus more on the quality of the response generation. Yeah.
+
+Unknown Speaker  25:47  
+Yeah, so I think our focus is more on that. I think the task we're trying to solve is just how can AI proactively engage in human human conversations and inner thoughts is just like a way to do that.
+
+Unknown Speaker  26:05  
+I feel like another study that we interested in is like what the purpose of the engagement right is it as you say, right, adding more information is a purpose or because there is a there is a discourse literature basically analyze new sentence, what's their relationship with previous alternates, right. So so I feel like maybe you can borrow some kind of score prediction. So you know, like this sentence is, kind of extend or add more example about a previous turn. So that's the purpose of this. This turn. Yeah, there's okay. I can recall there's a category of this relationship that people are trying to, you know that I've seen that before. Yes. Okay. Yeah, I think that will be interesting analysis. Yeah, yeah.
+
+Unknown Speaker  27:09  
+Let me see where I can shoot.
+
+Unknown Speaker  27:36  
+Okay. Anyway, maybe you don't let me find out later. Okay.
+
+Unknown Speaker  27:41  
+Yeah. But the second question is like how to evaluate this system. Like, I think quality evaluation should be fired, just recruit users and then let them interact with the system. And then compared to the ground like compared to the baseline system, like just the regular chatty, PT or compared to like human conversations, but I'm not sure like, if we can develop some metrics to quantitatively evaluate, like the performance of AI's productivity Yeah, especially like from an NLP perspective, as all NLP papers have like some kind of quantitative metric right.
+
+Unknown Speaker  28:41  
+So if our task yeah
+
+Unknown Speaker  28:51  
+yeah, yeah. I feel like I feel like laces for automatic metrically could be tough. So you may have a cube a vision is quite straightforward, right. You can ask a set of environment and say, Hey, where are you think at this turn as this is, you know, reasonable should say it is whatever some current some some kind of dimensions, automatic evaluations.
+
+Unknown Speaker  29:29  
+Like to immediately I can I can think of as just compared to a real, like group conversation data set. And yeah,
+
+Unknown Speaker  29:37  
+I think so. So, so you need to find out the real multi party comes with data sets. And then you assume because the key I think the key part is like if you start from the beginning, then the contact you don't know where that come from, could be come from some person's brand history, whatever, right? So maybe you should focus on the later part. Of a conversation and GROUNDED GROUNDED in that on a particular person and evaluate. Maybe you will need to also, if need to figure out where that response from a particular person is a knowledge grounded or not. And whether that knowledge, you maybe you need to simulate that knowledge on the site. And what you need to measure is like when how the distance is between the AI step in comparing to the real data like this, this person actually step into status that the UK measure or not, maybe measure the turn difference, or coverage difference.
+
+Transcribed by https://otter.ai
